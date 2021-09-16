@@ -1,0 +1,53 @@
+p{
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#heading{
+  color: dodgerblue;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: arial;
+}
+
+.sub-heading{
+  font-family: helvetica;
+  color: orangered;
+  
+}
+
+/* Attribute Selectors */
+
+input[type]{
+  display: block;
+  margin: 8px 4px;
+  padding: 4px 6px;
+}
+
+/* Attribute Selector with value */
+
+input[type = "text"]{
+  border: 2px solid forestgreen;
+  border-radius: 4px;
+}
+
+/* Attribute Starts With - a specific word (css will be applied to matching starting word only)*/
+
+p[title^="n"]{
+  color: green;
+}
+
+/* Attribute Ends With - a specific word (css will be applied to matching ending word only) */
+
+p[title$= "title"]{
+  border: 2px dotted black;
+  width:70px;
+}
+
+/* Attribute Contains a Specific Word - attribute that contain a word */
+
+p[title~="new"]{
+  font-family: monospace;
+  font-size: 20px;
+}
