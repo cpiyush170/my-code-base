@@ -1,0 +1,25 @@
+/* Combinator Selector are used to select elements in different ways */
+
+/* SELECT MULTIPLE ELEMENTS BY SEPERATING THEM WITH A COMMA */
+p, button{
+  color: red;
+}
+/* SELECTS ALL DESCENDANT OF THAT ELEMENT OR TAG */
+#outerDiv p{
+  font-family: helvetica;
+  font-size: 20px;
+  line-height: 1.6;
+}
+/* SELECT INSIDE PARENT (DIRECT DESCENDANT) */
+#innerDiv > p{
+  color: green;
+}
+/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY AFTER AN ELEMENT */
+h3 + p {
+  color: blue;
+  text-decoration: underline;
+}
+/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY BEFORE AN ELEMENT */
+p ~ h4{
+  color: orangered;
+}
