@@ -1,0 +1,177 @@
+html{
+  height: 100%;
+}
+
+/*CSS RESETS & FONT FOR WHOLE DOCUMENT*/
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+/*Positioning our container and giving basic styling*/
+.login-box{
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  width: 400px;
+  padding: 40px;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+/* Styling for our heading element*/
+.login-box h2{
+  margin: 0 0 30px;
+  text-align: center;
+  color: #fff;
+}
+/* Positioning input containers */
+.login-box .user-box{
+  position: relative;
+  /*border:2px solid red;*/
+  
+}
+/* Styling done on input elements */
+.login-box .user-box input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+/* Positioning labels relative to input containers and styling them*/
+/*Transition when user focus and validate on labels */
+.login-box .user-box label{
+   position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+  
+}
+/* Transitioning for labels*/
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+/*Styling our anchor element with transition on hover*/
+.login-box form a{
+  position: relative;
+  display: inline-block;
+  color: #03e9f4;
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: .5s;
+  overflow: hidden;
+  
+}
+/* Hovering transition for anchor element */
+.login-box form a:hover{
+  background-color: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+              
+}
+/*Positioning span relative to anchor element*/
+.login-box a span{
+  position: absolute;
+  display: block;
+}
+/* Selecting first span element and animating it from -100% left to 100% left*/
+/*here width is 100% to cover whole a tag and height only 2px*/
+.login-box a span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+/* animation rule for first span from -100 left to 100% left*/
+@keyframes btn-anim1{
+  0%{
+    left: -100%;
+  }
+  50%,100%{
+    left: 100%;
+  }
+}
+/* Selecting 2nd span element and animating it from -100% top to 100% top*/
+/* here span is vertical positioned so, height 100% to cover a tag right side and width 2px consistent */
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent,#03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s;
+}
+@keyframes btn-anim2{
+  0%{
+    top: -100%;
+  }
+   50%,100%{
+    top: 100%;
+  }
+}
+/* Selecting third span element and animating it from -100% right to 100% right*/
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent,#03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s;
+}
+
+@keyframes btn-anim3{
+  0%{
+    right: -100%;
+  }
+  50%,100%{
+    right: 100%;
+  }
+}
+/* Selecting fourth span element and animating it from -100% bottom to 100% bottom*/
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent,#03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s;
+}
+
+@keyframes btn-anim4{
+  0%{
+    bottom: -100%;
+  }
+  50%,100%{
+    bottom: 100%;
+  }
+}
