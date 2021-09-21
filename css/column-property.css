@@ -1,0 +1,16 @@
+.newspaper{
+  /*column-count property specifies number of columns an element should be divided into*/
+  column-count: 3;
+  /*column-gap is used to provide gap between respective columns*/
+  column-gap: 40px;
+  /* specify style of col rule*/
+  column-rule-style: dotted;
+  /*specify width of col rule*/
+  column-rule-width: 1px;
+  /*specify color of col rule*/
+  column-rule-color: red;
+  /*Short-hand for column-rule: width, style, color*/
+  column-rule: 2px solid lightblue;
+  column-span: all;
+  column-width: 100px;
+}
