@@ -1,0 +1,50 @@
+/* Flexbox in CSS*/
+/* Main Axis and Cross Axis - Main axis is determined by whatever we set the flex-direction value(if it is row, main axis == row or vice-versa) and cross axis is opposite to main-axis*/
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.container2{
+  width: 700px;
+  height: 300px;
+  background: cyan;
+  display: flex;
+  flex-direction: row;
+  /* will wrap the flex items to new line*/
+  flex-wrap: wrap;
+  /* short-hand for flex direction and wrap*/
+  flex-flow: row wrap;
+  /*space items along main-axis, values: flex-start(default)
+   flex-end, center, space-between, space-around, space-evenly*/
+  justify-content: space-evenly;
+  /* space flex-items along cross axis*/
+  align-items: center;
+  /* Used to adjust space when more flex-items are added*/
+  align-content: center;
+  
+}
+.one{
+  width: 100px;
+  background: red;
+  border: 2px solid black;
+  margin: 1rem 0;
+  
+}
+.two{
+  width: 100px;
+  background: red;
+  border: 2px solid black;
+  margin: 1rem 0;
+}
+.three{
+  width: 100px;
+  background: red;
+  border: 2px solid black;
+  margin: 1rem 0;
+}
+.four{
+  width: 100px;
+  background: red;
+  border: 2px solid black;
+  margin: 1rem 0;
+}
