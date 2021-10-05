@@ -1,0 +1,34 @@
+/* An EM is a relative unit of typography equal to the currenttly specified font size*/
+/* html(root) element has 1em = 16px by default in all browsers unless changed*/
+
+div{
+  width: 50%;
+  background-color: red;
+  
+}
+h1{
+  font-size: 3em; /* 1em = 16px, so 3em = 3*16 = 48px */
+  /*Since the font-size in <h1> is now set to 3em. Other properties computed with em in <h1> would see that 1em = 48px.*/
+  margin-bottom: 1em; /* that's why 1em = 48px */
+}
+p{
+  font-size: 2em; /*relative to root(html),so 2em = 32px*/
+  margin-bottom: 1em;
+}
+/*rem means Root EM. It’s built to provide some relief the em computational problem that many faced.
+ 1rem = 16px (relative to root element always)
+It is a unit of typography equal to the root font-size. This means 1rem is always equal to the font-size defined in <html>.*/
+
+/* rem and em have their strengths and weaknesses. They should be used differently, depending on the circumstances.*/
+/* Size in em if the property scales according to its font-size
+Size everything else in rem.*/
+.header{
+  font-size: 2.5rem;
+  background: #7f7cff;
+  padding: 0.5em 0.75em;
+}
+.header--large{
+  font-size: 3rem;
+  
+}
+/*As you can see, em can be incredibly helpful when you have a property that needs to scale with it’s font size*/
