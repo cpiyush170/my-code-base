@@ -1,0 +1,53 @@
+/*flex-items properties */
+.container{
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(red,dodgerblue);
+  display: flex;
+  
+}
+.item{
+  height: 50px;
+  /*flex-basis limited by min-width and max-width*/
+  /* size our flex-items fit to container with using flex-shrink*/
+  /*flex-basis doesn't overflow items*/
+  /*flex-basis: 500px;*/
+  /*flex is shorthand property for flex grow, shrink and basis*/
+  /*flex: [grow] [shrink] [basis] */
+  flex: 0 1 200px;
+  box-shadow: 0px 0px 8px 1px;
+  background-color: lightgreen;
+}
+
+
+.one{
+  /* Item having highest order will be pushed back and lowest order items will come first*/
+  order: 1;
+  /*align-self is used to align a individual item */
+  align-self: end;
+  /*flex-grow property specifies how flex-items should use remaining space to fill */
+  /*flex-grow: 0; */
+  /*flex-shrink specifies rate at which flex items should shrink */
+  /*flex-shrink: 1; */
+  
+}
+
+.two{
+  
+  order: 1;
+  /*flex-grow: 0;
+  flex-shrink: 1; */
+}
+.three{
+  
+  order: 1;
+  /*
+  flex-shrink: 0;
+  flex-shrink: 1; */
+}
+.four{
+  
+  order: 1;
+  /*
+  flex-grow: 0;  */
+}
