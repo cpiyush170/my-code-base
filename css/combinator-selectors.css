@@ -14,7 +14,7 @@ p, button{
 #innerDiv > p{
   color: green;
 }
-/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY AFTER AN ELEMENT (IN THIS CASE ALL P ELEMENTS AFTER H3) */
+/* SELECTS ALL ELEMENTS PLACED IMMEDIATELY AFTER AN ELEMENT (IN THIS CASE ALL P ELEMENTS AFTER H3) (Not child elements but adjacent(siblings)) */
 h3 + p {
   color: blue;
   text-decoration: underline;
