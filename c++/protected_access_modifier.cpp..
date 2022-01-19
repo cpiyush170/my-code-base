@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Base{
+    protected:
+        int a;
+    private:
+        int b;
+};                      
+/*                      Public derivation | Private derivation | Protected derivation
+   1. Private members    Not inherited      Not inherited       Not inherited
+   2. Protected members  protected          private             protected
+   3. Public members     public             private             protected
+*/
+class Derived : protected Base{
+
+};
+int main() {
+    Base b;
+    Derived d;
+    // will not work as a is protected
+    cout << b.a <<endl;
+}
