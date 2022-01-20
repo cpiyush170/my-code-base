@@ -1,4 +1,4 @@
-// Multiple inheritance 
+// Multiple inheritance - A derived class (sub or child class) with two or more base class
 #include <iostream>
 using namespace std;
 
