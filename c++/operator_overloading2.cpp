@@ -23,6 +23,7 @@ public:
 };
 int main() {
     Complex c1(10,5), c2(2,4);
-    Complex c3 = c1 + c2;
+    // how complier see's it, we are calling + operator on c1 passing c2 and storing result in c3
+    Complex c3 = c1 + c2; //  c3 = c1.add(c2)
     c3.print();
 }
